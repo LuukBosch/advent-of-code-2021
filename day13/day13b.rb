@@ -14,7 +14,7 @@ end
 def fold_y_line(paper, y)
   folded_dots = paper.keys.filter{|key| key[1] > y}
   folded_dots.each do |dot|
-    paper[[dot[0], (y - (dot[1] - y))]] = '*'
+    paper[[dot[0], (y - (dot[1] - y))]] = '#'
     paper.delete(dot)
   end
 end
@@ -22,7 +22,7 @@ end
 def fold_x_line(paper, x)
   folded_dots = paper.keys.filter{|key| key[0] > x}
   folded_dots.each do |dot|
-    paper[[x - (dot[0] - x), dot[1]]] = '*'
+    paper[[x - (dot[0] - x), dot[1]]] = '#'
     paper.delete(dot)
   end
 end

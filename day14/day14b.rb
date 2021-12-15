@@ -1,7 +1,7 @@
 first_line = true
 template = []
 mapping = {}
-step = 40
+step = 10000
 File.readlines('input.txt', chomp: true).each do |line|
   next if line.empty?
 
